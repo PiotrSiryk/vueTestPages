@@ -58,7 +58,7 @@ export default {
     filteredList() {
       const filtered = this.arr.filter(
         (el, index) =>
-          Math.ceil(index / this.elementsOnPage) === this.currentPage
+          Math.ceil((index + 1) / this.elementsOnPage) === this.currentPage
       );
       console.log(filtered);
       return filtered;
